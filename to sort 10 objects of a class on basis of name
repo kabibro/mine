@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Student {
+	String name;
+	int roll;
+	public Student(String name, int roll) {
+		this.name=name;
+		this.roll=roll;
+	}
+	public static void main(String[] args) {
+		List<Student>studentList= new ArrayList<>();
+		studentList.add(new Student("hari", 01));
+		studentList.add(new Student("ram", 02));
+		studentList.add(new Student("alice", 03));
+		studentList.add(new Student("manira", 04));
+		studentList.add(new Student("kabi", 05));
+		studentList.add(new Student("harry", 06));
+		studentList.add(new Student("mike", 07));
+		studentList.add(new Student("ganesh", 18));
+		studentList.add(new Student("avi", 19));
+		studentList.add(new Student("shyam", 10));
+		Collections.sort(studentList,(s1,s2)->s1.name.compareTo(s2.name));
+		for(Student student:studentList) {
+			System.out.println("name :"+student.name +", roll: "+student.roll);
+		}
+		
+	}
+
+}
